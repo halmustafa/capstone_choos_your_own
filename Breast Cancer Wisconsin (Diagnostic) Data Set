@@ -1,0 +1,186 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Breast Cancer Wisconsin (Diagnostic) Data Set | Kaggle</title>
+  <meta charset="utf-8" />
+    <meta name="robots" content="index, follow" />
+  <meta name="description" content="Predict whether the cancer is benign or malignant" />
+  <meta name="turbolinks-cache-control" content="no-cache" />
+    <meta name="keywords" content="cancer,healthcare" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#008ABC" />
+  <script nonce="8EtxY/eK9An/aoRFMsJK5A==" type="text/javascript">
+    window["pageRequestStartTime"] = 1696164292718;
+    window["pageRequestEndTime"] = 1696164292875;
+    window["initialPageLoadStartTime"] = new Date().getTime();
+  </script>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="anonymous" /><link rel="preconnect" href="https://stats.g.doubleclick.net" /><link rel="preconnect" href="https://storage.googleapis.com" /><link rel="preconnect" href="https://apis.google.com" />
+  <link href="/static/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="manifest" href="/static/json/manifest.json" crossorigin="use-credentials">
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/icon?family=Google+Material+Icons&display=block"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i&display=swap"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/icon?family=Google+Material+Icons&display=block"
+    rel="stylesheet" media="print" id="async-google-font-1" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i&display=swap"
+    rel="stylesheet" media="print" id="async-google-font-2" />
+  <script nonce="8EtxY/eK9An/aoRFMsJK5A==" type="text/javascript">
+    const styleSheetIds = ["async-google-font-1", "async-google-font-2"];
+    styleSheetIds.forEach(function (id) {
+      document.getElementById(id).addEventListener("load", function() {
+        this.media = "all";
+      });
+    });
+  </script>
+
+    <link rel="canonical" href="https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/vendor.css?v=dd064d680b3ca5c8a76b" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/app.css?v=d698eb8243d93fb284a5" />
+  
+    
+ 
+      <script nonce="8EtxY/eK9An/aoRFMsJK5A==">
+        try{(function(a,s,y,n,c,h,i,d,e){d=s.createElement("style");
+        d.appendChild(s.createTextNode(""));s.head.appendChild(d);d=d.sheet;
+        y=y.map(x => d.insertRule(x + "{ opacity: 0 !important }"));
+        h.start=1*new Date;h.end=i=function(){y.forEach(x => x<d.cssRules.length ? d.deleteRule(x) : {})};
+        (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+        })(window,document,['.site-header-react__nav'],'dataLayer',2000,{'GTM-52LNT9S':true});}catch(ex){}
+    </script>
+    <script nonce="8EtxY/eK9An/aoRFMsJK5A==">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-T7QHS60L4Q', {
+            'optimize_id': 'GTM-52LNT9S',
+            'displayFeaturesTask': null,
+            'send_page_view': false,
+            'content_group1': 'Datasets'
+        });
+    </script>
+    <script nonce="8EtxY/eK9An/aoRFMsJK5A==" async src="https://www.googletagmanager.com/gtag/js?id=G-T7QHS60L4Q"></script>
+
+  
+    
+    <meta property="og:url" content="https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data" />
+    <meta property="og:title" content="Breast Cancer Wisconsin (Diagnostic) Data Set" />
+    <meta property="og:description" content="Predict whether the cancer is benign or malignant" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://storage.googleapis.com/kaggle-datasets-images/180/384/3da2510581f9d3b902307ff8d06fe327/dataset-card.jpg" />
+    <meta property="fb:app_id" content="2665027677054710" />
+
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaggledatasets" />
+
+
+  <meta name="twitter:site" content="@Kaggle" /> 
+  
+    
+    <script nonce="8EtxY/eK9An/aoRFMsJK5A==" type="application/ld+json">{"@context":"http://schema.org/","@type":"Dataset","name":"Breast Cancer Wisconsin (Diagnostic) Data Set","description":"Features are computed from a digitized image of a fine needle aspirate (FNA) of a breast mass. They describe characteristics of the cell nuclei present in the image. \nn the 3-dimensional space is that described in: [K. P. Bennett and O. L. Mangasarian: \"Robust Linear Programming Discrimination of Two Linearly Inseparable Sets\", Optimization Methods and Software 1, 1992, 23-34]. \n\nThis database is also available through the UW CS ftp server: \nftp ftp.cs.wisc.edu \ncd math-prog/cpo-dataset/machine-learn/WDBC/\n\nAlso can be found on UCI Machine Learning Repository: https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29\n\nAttribute Information:\n\n1) ID number \n2) Diagnosis (M = malignant, B = benign) \n3-32) \n\nTen real-valued features are computed for each cell nucleus: \n\na) radius (mean of distances from center to points on the perimeter) \nb) texture (standard deviation of gray-scale values) \nc) perimeter \nd) area \ne) smoothness (local variation in radius lengths) \nf) compactness (perimeter^2 / area - 1.0) \ng) concavity (severity of concave portions of the contour) \nh) concave points (number of concave portions of the contour) \ni) symmetry \nj) fractal dimension (\"coastline approximation\" - 1)\n\nThe mean, standard error and \"worst\" or largest (mean of the three\nlargest values) of these features were computed for each image,\nresulting in 30 features.  For instance, field 3 is Mean Radius, field\n13 is Radius SE, field 23 is Worst Radius.\n\nAll feature values are recoded with four significant digits.\n\nMissing attribute values: none\n\nClass distribution: 357 benign, 212 malignant","url":"https://www.kaggle.com/uciml/breast-cancer-wisconsin-data","version":2,"keywords":["subject, health and fitness, health, health conditions, cancer","subject, health and fitness, health, healthcare"],"license":{"@type":"CreativeWork","name":"CC BY-NC-SA 4.0","url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"},"identifier":["180"],"includedInDataCatalog":{"@type":"DataCatalog","name":"Kaggle","url":"https://www.kaggle.com"},"creator":{"@type":"Organization","name":"UCI Machine Learning","url":"https://www.kaggle.com/uciml","image":"https://storage.googleapis.com/kaggle-organizations/7/thumbnail.png"},"distribution":[{"@type":"DataDownload","requiresSubscription":true,"encodingFormat":"zip","fileFormat":"zip","contentUrl":"https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data/download?datasetVersionNumber=2","contentSize":"49796 bytes"}],"commentCount":51,"dateModified":"2016-09-25T10:49:04.067Z","discussionUrl":"https://www.kaggle.com/uciml/breast-cancer-wisconsin-data/discussion","alternateName":"Predict whether the cancer is benign or malignant","isAccessibleForFree":true,"thumbnailUrl":"https://storage.googleapis.com/kaggle-datasets-images/180/384/3da2510581f9d3b902307ff8d06fe327/dataset-card.jpg","interactionStatistic":[{"@type":"InteractionCounter","interactionType":"http://schema.org/CommentAction","userInteractionCount":51},{"@type":"InteractionCounter","interactionType":"http://schema.org/DownloadAction","userInteractionCount":311040},{"@type":"InteractionCounter","interactionType":"http://schema.org/ViewAction","userInteractionCount":1793812},{"@type":"InteractionCounter","interactionType":"http://schema.org/LikeAction","userInteractionCount":3244}]}</script>
+
+
+  
+    
+
+  
+    
+
+
+    <script nonce="8EtxY/eK9An/aoRFMsJK5A==">window['useKaggleAnalytics'] = true;</script>
+
+  <script id="gapi-target" nonce="8EtxY/eK9An/aoRFMsJK5A==" src="https://apis.google.com/js/api.js" defer
+    async></script>
+  <script nonce="8EtxY/eK9An/aoRFMsJK5A==" src="/static/assets/runtime.js?v=51565a0894ae87c77a8c" data-turbolinks-track="reload"></script>
+  <script nonce="8EtxY/eK9An/aoRFMsJK5A==" src="/static/assets/vendor.js?v=0ec9b4d895a58bd12ce9" data-turbolinks-track="reload"></script>
+  <script nonce="8EtxY/eK9An/aoRFMsJK5A==" src="/static/assets/app.js?v=7efd2146a3ec3abf4af8" data-turbolinks-track="reload"></script>
+    <script nonce="8EtxY/eK9An/aoRFMsJK5A==" type="text/javascript">
+      window.kaggleStackdriverConfig = {
+        key: 'AIzaSyA4eNqUdRRskJsCZWVz-qL655Xa5JEMreE',
+        projectId: 'kaggle-161607',
+        service: 'web-fe',
+        version: 'ci',
+        userId: '0'
+      }
+    </script>
+</head>
+
+<body data-turbolinks="false">
+  <main>
+    
+
+
+
+
+
+<div id="site-container"></div>
+
+<div id="site-body" class="hide">
+    
+
+
+<script nonce="8EtxY/eK9An/aoRFMsJK5A==" type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+    preferredFont: "TeX",
+    availableFonts: ["STIX", "TeX"],
+    linebreaks: {
+    automatic: true
+    },
+    EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+    inlineMath: [["\\(", "\\)"], ["\\\\(", "\\\\)"]],
+    displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+    processEscapes: true,
+    ignoreClass: "tex2jax_ignore|dno"
+    },
+    TeX: {
+    noUndefined: {
+    attributes: {
+    mathcolor: "red",
+    mathbackground: "#FFEEEE",
+    mathsize: "90%"
+    }
+    }
+    },
+    Macros: {
+    href: "{}"
+    },
+    skipStartupTypeset: true,
+    messageStyle: "none",
+    extensions: ["Safe.js"],
+    });
+</script>
+<script type="text/javascript" nonce="8EtxY/eK9An/aoRFMsJK5A==">
+  window.addEventListener("DOMContentLoaded", () => {
+    const head = document.getElementsByTagName("head")[0];
+    const useProdHosts = ["www.kaggle.com", "admin.kaggle.com"];
+    const subdomain = useProdHosts.includes(window.location.hostname) ? "www" : "staging";
+
+    const lib = document.createElement("script");
+    lib.type = "text/javascript";
+    lib.src = `https://${subdomain}.kaggleusercontent.com/static/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML`;
+    head.appendChild(lib);
+  });
+</script>
+
+
+
+
+</div>
+
+
+
+
+  </main>
+</body>
+
+</html>
